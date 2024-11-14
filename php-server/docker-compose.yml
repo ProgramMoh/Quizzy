@@ -1,0 +1,31 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile-web
+    container_name: web
+    ports:
+      - "8800:80"
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - db
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile-db
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      #- mysql_data:/var/lib/mysql
+      - C:\Users\user\Desktop\Year 5\Fall2024\SENG513\Assignments\Assignment3\php-server\scripts\init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  mysql_data:
+    # Define volume for persisting MySQL data

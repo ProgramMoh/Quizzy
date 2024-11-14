@@ -1,0 +1,231 @@
+header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #252525;
+  height: 25vh;
+  color: #eae1c2;
+  size: 2rem;
+}
+.titleText {
+  text-align: center;
+  margin-top: 7rem;
+  font-size: 5rem;
+  opacity: 0; /* Start with the title hidden */
+  animation: fadeIn 1s ease-in-out forwards; /* fade in animation */
+  animation-delay: 0.5s; /* Delay animation */
+  color: #eae1c2;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Final state: fully visible */
+  }
+}
+
+.bodySection {
+  font-family: Arial, sans-serif;
+  background-color: #313131;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.bodySection form {
+  margin: 10px 0; /* Add padding between buttons */
+}
+.bodySection p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2rem; 
+  color: #bbaf82; /* Match the header text color */
+  margin-bottom: 20px; /* Add space below the paragraph */
+  text-align: center; 
+  opacity: 0; /* Start with the text hidden */
+  animation: fadeIn 1s ease-in-out forwards; /* fade in animation */
+  animation-delay: 1.5s; /* Delay longer than title */
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1; /* Final state: fully visible */
+  }
+}
+
+button {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #9e84ff;
+  border: none;
+  padding: 20px 40px;
+  font-size: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  align-content: center;
+}
+button:hover {
+  background-color: #5e46b6;
+  transform: scale(1.05);
+}
+
+#next-btn {
+  background-color: #72fcab;
+  left: 50%; /* Align horizontally to the center of the container */
+}
+#next-btn:hover {
+  background-color: #10fa72;
+  transform: scale(1.05);
+}
+.form-container {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #918765;
+  padding: 2rem; /* Padding around the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow depth */
+  margin: 1.5rem 0;
+}
+
+.notification {
+  position: fixed; /* Fixed positioning to show over the page */
+  top: 20px; /* Distance from the top of the viewport */
+  left: 50%; /* Center */
+  transform: translateX(-50%); 
+  background-color: #fc789f;
+  font-size: 1.25rem;
+  color: #333; 
+  padding: 1rem; /* Padding for the notification */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* shadow depth */
+  z-index: 1000; /* above other elements */
+  animation: fade-in 0.5s ease-in-out, fade-out 0.5s ease-in-out 4.5s forwards; /* dade in and fade out animations */
+}
+
+.notification.success {
+  background-color: #4caf50; /* Green background for success */
+}
+
+
+@keyframes fade-in {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+.list-container {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  background-color: #5f5f5f; 
+  padding: 4rem;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow depth */
+  margin: 1.5rem 0;
+  font-size: 1.4rem;
+}
+
+h2 {
+  margin-top: -4rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 3rem; 
+  color: #bbaf82;
+  margin-bottom: 5rem; /* Add space below the paragraph */
+  text-align: center; 
+  opacity: 0; /* Start with the text hidden */
+  animation: fadeIn 1s ease-in-out forwards; /* fade in animation */
+  animation-delay: 1.5s; /* Delay longer than title */
+}
+
+ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+li {
+  margin-bottom: 0.5rem; /* Space between list items */
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; /* Space out columns */
+  margin: 0;
+  padding: 0;
+  
+}
+
+.user-item {
+  flex: 0 0 calc(33.33% - 10px); /* 3 columns with spaceing */
+  box-sizing: border-box; 
+  margin-bottom: 20px; /* Space between rows */
+  background-color: #f9f9f9; 
+  padding: 10px; /* Inner padding */
+  border: 1px solid #ccc; 
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; 
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards; /* fadein animation */
+  animation-delay: 2s; /* Delay longer than rest */
+}
+@keyframes fadeIn {
+  to {
+      opacity: 1; /* Final state: fully visible */
+  }
+}
+
+.game-container {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #5f5f5f; 
+  padding: 3rem; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* hadow depth */
+  margin: 1.5rem 0; 
+  font-size: 1.4rem;
+}
+/* variant of h2 */
+h3 {
+  margin-top: 1rem; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2rem; 
+  color: #bbaf82; 
+  margin-bottom: 5rem; 
+  text-align: center; 
+}
+#logout-btn {
+  margin-top: 2rem;
+  background-color: #fd5d6a;
+  left: 50%; /* Align to the center */
+}
+#logout-btn:hover {
+  background-color: #bb2835;
+  transform: scale(1.05);
+}
+/* Media query for smaller screens */
+@media (max-width: 1200px) {
+  header {
+    height: 20vw; /* flexible height on small screens */
+    align-items: flex-start; 
+  }
+
+  .titleText {
+    font-size: 7vw;
+    margin-left: 0;
+    margin-top: auto;
+  }
+
+}

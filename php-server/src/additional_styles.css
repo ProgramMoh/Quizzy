@@ -1,0 +1,119 @@
+header {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background-color: #545454;
+  height: 15rem;
+  color: #b5b5b5;
+  size: 1rem;
+}
+.titleText {
+  text-align: left;
+  margin-top: 7rem;
+  font-size: 5rem;
+  opacity: 0; /* Start with the title hidden */
+  margin-left: 1.5rem; /* Center the text */
+  transition: opacity 0.5s ease-in-out 1s;
+  color: #eae1c2;
+  font-family: Arial;
+}
+.image-container {
+  text-align: left;
+}
+
+.rotating-image {
+  width: 9.5rem;
+  height: 13rem;
+  margin: 1.5rem;
+  margin-left: 3rem;
+  transition: transform 1.5s ease-in-out;
+}
+
+.rotating-image:hover {
+  transform: rotate(270deg); /* Rotate on hover */
+}
+header:hover .titleText {
+  opacity: 1; /* Make the title fully visible when hovering over the container */
+}
+/* When not hovering, it will take time to fade out */
+header:not(:hover) .titleText {
+  transition-delay: 1000000s;
+}
+
+.bodySection {
+  font-family: Arial, sans-serif;
+  background-color: #eae1c2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.quiz-container {
+  background-color: #545454;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 70vw;
+}
+.question {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.choices {
+  list-style: none;
+  padding: 0;
+  color: #fff;
+}
+.choices li {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+button {
+  background-color: #9e84ff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+button:hover {
+  background-color: #5e46b6;
+  transform: scale(1.05);
+}
+
+#next-btn {
+  background-color: #eae1c2;
+  color: #545454;
+  left: 50%; /* Align horizontally to the center of the container */
+}
+#next-btn:hover {
+  background-color: #71694c;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1200px) {
+  header {
+    height: 20vw; /* Allow flexible height on smaller screens */
+    align-items: flex-start; /* Align content to the left */
+  }
+
+  .titleText {
+    font-size: 7vw;
+    margin-left: 0;
+    margin-top: auto;
+  }
+
+  .rotating-image {
+    width: 12.5vw;
+    height: 17.5vw;
+    margin-left: 5%;
+    margin-top: auto;
+  }
+}
