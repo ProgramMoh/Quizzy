@@ -1,5 +1,6 @@
 # Quizzy
-Welcome to Quizzy! This README provides a comprehensive guide on how to use the platform, including user registration, login, quiz gameplay and gamemodes, and admin-specific features.
+Welcome to Quizzy! Quizzy is a side project that I'm working on and it is in continious development for now. \
+This README provides a comprehensive guide on how to use the platform, including user registration, login, quiz gameplay and gamemodes, and admin-specific features.
 
 ## Table of Contents
 1. [Introduction](#introduction)
